@@ -1,0 +1,19 @@
+.banner {
+  font-family: $font-heading;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: $color-green;
+  background-image: url(../img/bg-promo.jpg);
+}
+
+.banner__title {
+  font-size: 36px;
+  line-height: 100%;
+}
+
+.banner__text {
+  font-size: 14px;
+  line-height: 100%;
+}

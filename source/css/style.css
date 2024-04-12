@@ -1,4 +1,286 @@
-body {
-  background: red;
+@font-face {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+}
+.page {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: #444444;
+}
+
+.page__body {
+  margin: 0;
+}
+
+.site-menu {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.site-menu__link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.banner {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+  background-image: url(../img/bg-promo.jpg);
+}
+
+.banner__title {
+  font-size: 36px;
+  line-height: 100%;
+}
+
+.banner__text {
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.button {
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background-color: #5eaa2f;
+}
+
+.catalog-item {
+  background-color: #f2f2f2;
+}
+
+.catalog-item__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 154%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.catalog-item__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+.page-main__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 111%;
+  color: #000000;
+}
+
+.page-main__subheading {
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.process__list {
+  list-style: none;
+}
+
+.example {
+  background-color: #ebebeb;
+}
+
+.example__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.example__definition {
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+  color: #444444;
+}
+
+.example__spending {
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 143%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+
+.switcher__button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.contacts__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.contacts__address {
+  line-height: 143%;
+  color: #444444;
+}
+
+.page-footer {
+  background-color: #ebebeb;
+}
+
+.card__link {
+  text-decoration: none;
+}
+
+.card__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.card__list {
+  font-size: 12px;
+  line-height: 133%;
+  color: #444444;
+}
+
+.show-more__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111111;
+}
+
+.show-more__text {
+  font-size: 12px;
+  line-height: 133%;
+  text-align: center;
+  color: #444444;
+}
+
+.catalog-additional__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.catalog-additional__list {
+  list-style: none;
+}
+
+.additional-goods {
+  line-height: 100%;
+}
+
+.additional-goods__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.additional-goods__description {
+  color: #444444;
+}
+
+.offer {
+  background-color: #68b738;
+  background-image: url(../img/bg-cat-bag.jpg);
+}
+
+.offer__text {
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.field-group__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 108%;
+  color: #000000;
+}
+
+.field {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 112%;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.field__input {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 112%;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.control {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 112%;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.form__text {
+  line-height: 114%;
+  text-align: center;
+  color: #000000;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
