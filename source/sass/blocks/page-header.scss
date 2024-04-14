@@ -1,0 +1,15 @@
+.page-header__nav {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 65px;
+}
+
+.page-header__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+
+
+

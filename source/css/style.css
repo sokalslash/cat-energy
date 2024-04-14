@@ -13,6 +13,8 @@
   src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
 }
 .page {
+  min-width: 320px;
+  height: 100%;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -21,10 +23,14 @@
 }
 
 .page__body {
+  min-height: 100%;
   margin: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 .site-menu {
+  display: none;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -32,6 +38,12 @@
   text-align: center;
   text-transform: uppercase;
   list-style: none;
+}
+@media (min-width: 768px) {
+  .site-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .site-menu__link {
@@ -271,6 +283,40 @@
   line-height: 114%;
   text-align: center;
   color: #000000;
+}
+
+.page-header__nav {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 65px;
+}
+
+@media (min-width: 768px) {
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+.container {
+  width: 280px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 708px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1220px;
+  }
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+  gap: 56px;
 }
 
 .visually-hidden {
