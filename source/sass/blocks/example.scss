@@ -2,6 +2,16 @@
   background-color: $color-gray-100;
 }
 
+.example__container {
+  display: grid;
+  gap: 40px;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
 .example__title {
   font-family: $font-heading;
   font-size: 24px;

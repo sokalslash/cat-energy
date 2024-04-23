@@ -143,6 +143,17 @@
   background-color: #ebebeb;
 }
 
+.example__container {
+  display: grid;
+  gap: 40px;
+}
+@media (min-width: 1200px) {
+  .example__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
 .example__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
@@ -175,6 +186,11 @@
   color: #000000;
 }
 
+.contacts__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .contacts__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -190,6 +206,13 @@
 
 .page-footer {
   background-color: #ebebeb;
+}
+
+@media (min-width: 768px) {
+  .page-footer__container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .card__link {
