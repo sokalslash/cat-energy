@@ -1,11 +1,27 @@
+.catalog-additional__cotainer {
+  display: grid;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .catalog-additional__title {
   font-family: $font-heading;
   font-weight: 400;
   font-size: 24px;
   line-height: 100%;
   color: $color-black;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+  }
 }
 
 .catalog-additional__list {
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -2;
+  }
 }

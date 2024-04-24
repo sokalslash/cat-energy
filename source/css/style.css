@@ -79,30 +79,6 @@
   background-color: #5eaa2f;
 }
 
-.catalog-item {
-  padding: 20px;
-  background-color: #f2f2f2;
-}
-
-.catalog-item__title {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 154%;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.catalog-item__link {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 100%;
-  text-transform: uppercase;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
-}
-
 .page-main__header {
   margin-bottom: 20px;
 }
@@ -249,6 +225,15 @@
   color: #444444;
 }
 
+.catalog-additional__cotainer {
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .catalog-additional__cotainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .catalog-additional__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
@@ -256,9 +241,19 @@
   line-height: 100%;
   color: #000000;
 }
+@media (min-width: 1200px) {
+  .catalog-additional__title {
+    grid-column: 1/-1;
+  }
+}
 
 .catalog-additional__list {
   list-style: none;
+}
+@media (min-width: 1200px) {
+  .catalog-additional__list {
+    grid-column: 1/-2;
+  }
 }
 
 .additional-goods {
@@ -361,20 +356,61 @@
   gap: 56px;
 }
 
-.catalog__list {
+.catalog-section__container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 @media (min-width: 768px) {
-  .catalog__list {
+  .catalog-section__container {
     gap: 30px;
   }
 }
 @media (min-width: 1200px) {
-  .catalog__list {
+  .catalog-section__container {
     flex-direction: row;
     gap: 80px;
+  }
+}
+
+.catalog-section__item {
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.catalog-section__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 154%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.catalog-section__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+.catalog__container {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .catalog__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .catalog__container {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 64px;
   }
 }
 
