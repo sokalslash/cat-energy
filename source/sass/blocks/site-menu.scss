@@ -1,5 +1,4 @@
 .site-menu {
-  // display: none;
   padding: 0;
   font-family: $font-heading;
   font-weight: 500;
@@ -12,21 +11,55 @@
 
 
   @media (min-width:$tablet-width) {
-    // display: flex;
-    // justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    // white-space: nowrap;
   }
 }
 
 .site-menu__item {
-  padding: 22px;
-
   @media (max-width: $mobile-width-only) {
     border-top: 1px solid $color-gray-150;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
   }
 }
 
 .site-menu__link {
+  display: block;
+  padding: 22px;
   color: $color-black;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 17px;
+  }
+
+  &:link:hover {
+    opacity: 0.6;
+  }
+
+  &:link:active {
+    opacity: 0.3;
+  }
+
+  .page-header__nav--main & {
+    @media (min-width: $desktop-width) {
+      color: $color-white;
+    }
+  }
 }
+
+// .page-header__nav--main .site-menu__link {
+//       @media (min-width: $desktop-width) {
+//       color: $color-white;
+//       }
+// }
 

@@ -1,12 +1,14 @@
 .page-header__nav {
   position: relative;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .page-header__bar {
-  grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,12 +37,11 @@
 
 .page-header__menu {
   margin: 0;
-  grid-column: 1 / -1;
   background-color: $color-white;
 
   @media (max-width: $mobile-width-only) {
     .page-header__nav--closed & {
-      position: absolute;
+      position: absolute; // подумай нужно ли это здесь?
       display: none;
     }
 
@@ -49,6 +50,8 @@
       left: 0;
       right: 0;
       top: 70px;
+      z-index: 2;
+
       display: block;
     }
   }
