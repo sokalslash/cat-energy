@@ -3,7 +3,7 @@
 const navElement = document.querySelector('.page-header__nav');
 const burgerButtonElement = document.querySelector('.page-header__toggle')
 
-console.log(burgerButton);
+console.log(burgerButtonElement);
 
 navElement.classList.remove('page-header__nav--opend');
 navElement.classList.add('page-header__nav--closed');

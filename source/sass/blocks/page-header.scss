@@ -23,6 +23,7 @@
   background-image: url("../../img/close.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  cursor: pointer;
 
   @media(max-width: $mobile-width-only) {
     .page-header--closed & {

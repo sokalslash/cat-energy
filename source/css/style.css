@@ -54,9 +54,19 @@
     border-top: 1px solid #e6e6e6;
   }
 }
+
 @media (min-width: 768px) {
-  .site-menu__item {
-    padding: 0;
+  .site-menu__item--active {
+    position: relative;
+  }
+  .site-menu__item--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    height: 2px;
+    background-color: #68b738;
   }
 }
 
@@ -438,6 +448,7 @@
   background-image: url("../../img/close.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .page-header--closed .page-header__toggle {
