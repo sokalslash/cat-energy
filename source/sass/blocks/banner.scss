@@ -4,8 +4,12 @@
   text-align: center;
   text-transform: uppercase;
   color: $color-white;
-  background-color: $color-green;
-  background-image: url(../img/bg-promo.jpg);
+  background-color: $color-green-3;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image:
+    url('../img/bg-promo.jpg'),
+    linear-gradient($color-green-3 0, $color-green-3 302px, $color-white 302px);
 }
 
 .banner__title {

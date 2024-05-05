@@ -99,8 +99,10 @@
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #68b738;
-  background-image: url(../img/bg-promo.jpg);
+  background-color: #63a63b;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image: url("../img/bg-promo.jpg"), linear-gradient(#63a63b 0, #63a63b 302px, #ffffff 302px);
 }
 
 .banner__title {
