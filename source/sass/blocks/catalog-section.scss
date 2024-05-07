@@ -14,17 +14,108 @@
 }
 
 .catalog-section__item {
+  position: relative;
   padding: 20px;
   background-color: $color-gray-50;
 }
 
 .catalog-section__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding-left: 68px;
+  margin: 0;
+  margin-bottom: 22px;
   font-family: $font-heading;
   font-weight: 400;
   font-size: 24px;
   line-height: 154%;
   text-transform: uppercase;
   color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    padding-left: 0;
+    font-size: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    min-height: 100px;
+    margin-bottom: 39px;
+    padding-left: 162px;
+  }
+
+  &::before,            //???
+  &::after {            //???
+    content: '';        //???
+    position: absolute; //???
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $color-green;
+    border-radius: 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: calc(50% - 100px);
+    right: 62px;
+    left: auto;
+
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: calc(50% - 50px);
+    right: auto;
+    left: 0;
+
+    width: 100px;
+    height: 100px;
+  }
+
+  &::after {
+    background-size: contain;
+  }
+}
+
+.catalog-sections__title--slim {
+  &::after {
+    top: -3px;
+    left: 7px;
+
+    width: 36px;
+    height: 50px;
+
+    background-image: url("../img/cat-slim.svg");
+
+    @media (min-width: $tablet-width) {
+      top: calc(50% - 110px);
+      right: 92px;
+      left: auto;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: calc(50% - 54px);
+      left: 15px;
+
+      width: 70px;
+      height: 97px;
+    }
+  }
 }
 
 .catalog-section__link {
