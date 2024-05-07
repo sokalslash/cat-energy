@@ -6,6 +6,11 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 129%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 150%;
+  }
 }
 
 .page__body {

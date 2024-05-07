@@ -1,23 +1,84 @@
 .banner {
+  padding-top: 27px;
   font-family: $font-heading;
   font-weight: 400;
   text-align: center;
-  text-transform: uppercase;
-  color: $color-white;
-  background-color: $color-green-3;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-image:
-    url('../img/bg-promo.jpg'),
-    linear-gradient($color-green-3 0, $color-green-3 302px, $color-white 302px);
+
+  @media (max-width: $mobile-width-only) {
+    color: $color-white;
+    background-color: $color-green-3;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-image:
+      url('../img/bg-promo.jpg'),
+      linear-gradient($color-green-3 0, $color-green-3 302px, $color-white 302px);
+  }
+
+
+  @media (min-width: $tablet-width) {
+    color: $color-black;
+    text-align: left;
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      z-index: -2;
+      background-color: $color-green-3;
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      background-image: url('../img/bg-promo-large.jpg');
+    }
+  }
+}
+
+.banner__container {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding: 0 90px 526px;
+  }
 }
 
 .banner__title {
+  margin: 0;
+  margin-bottom: 25px;
   font-size: 36px;
+  font-weight: 400;
   line-height: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 414px;
+    padding-top: 40px;
+    font-size: 54px;
+  }
 }
 
 .banner__text {
+  padding-bottom: 29px;
   font-size: 14px;
   line-height: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 50px;
+    font-size: 20px;
+  }
+}
+
+.banner__img {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 250px;
+    left: 0;
+
+    width: 709px;
+    height: 609px;
+  }
 }
