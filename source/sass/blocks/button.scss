@@ -1,6 +1,6 @@
 .button {
-  display: block;
-  padding: 14px 26px;
+  padding: 11px 12px;
+  display: inline-block;
 
   font-family: $font-heading;
   text-transform: uppercase;
@@ -9,7 +9,16 @@
   background-color: $color-green-2;
 
   @media (min-width: $tablet-width) {
-    width: 244px;
+    padding: 14px 26px;
     font-size: 20px;
+  }
+
+  &:hover {
+    background-color: darken($color-green-2, 6%);
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+    background-color: darken($color-green-2, 6%);
   }
 }

@@ -34,7 +34,7 @@
       z-index: -2;
       background-color: $color-green-3;
       background-repeat: no-repeat;
-      background-position: 0 100%;
+      background-position: 100% 100%;
       background-image: url('../img/bg-promo-large.jpg');
     }
   }
@@ -44,6 +44,10 @@
   @media (min-width: $tablet-width) {
     position: relative;
     padding: 0 90px 526px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 610px 182px 80px;
   }
 }
 
@@ -62,23 +66,43 @@
 }
 
 .banner__text {
-  padding-bottom: 29px;
+  margin-bottom: 29px;
   font-size: 14px;
   line-height: 100%;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     font-size: 20px;
   }
 }
 
 .banner__img {
+  width: 280px;
+
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 250px;
-    left: 0;
+    top: 220px;
+    left: 60px;
+    z-index: -1;
 
-    width: 709px;
-    height: 609px;
+    width: 690px;
+    height: 590px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 0;
+    left: calc(50% - 162px);
+
+    width: 522px;
+    height: 499px;
+  }
+}
+
+.banner__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    // justify-self: start;
   }
 }

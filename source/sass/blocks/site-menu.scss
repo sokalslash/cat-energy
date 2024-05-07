@@ -42,6 +42,12 @@
       background-color: $color-green;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      background-color: $color-white;
+    }
+  }
 }
 
 .site-menu__link {
@@ -61,10 +67,14 @@
     opacity: 0.3;
   }
 
-  .page-header__nav--main & {
-    @media (min-width: $desktop-width) {
-      color: $color-white;
-    }
+  // .page-header__nav--main & {
+  //   @media (min-width: $desktop-width) {
+  //     color: $color-white;
+  //   }
+  // }
+
+  @media (min-width: $desktop-width) {
+    color: $color-white;
   }
 }
 
