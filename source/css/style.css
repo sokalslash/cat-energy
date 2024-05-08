@@ -701,19 +701,17 @@ p {
 .catalog-section__title::before, .catalog-section__title::after {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
 }
 .catalog-section__title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 50px;
   height: 50px;
   background-color: #68b738;
   border-radius: 50%;
 }
 @media (min-width: 768px) {
-  .catalog-section__title {
+  .catalog-section__title::before {
     top: calc(50% - 100px);
     right: 62px;
     left: auto;
@@ -722,7 +720,7 @@ p {
   }
 }
 @media (min-width: 1200px) {
-  .catalog-section__title {
+  .catalog-section__title::before {
     top: calc(50% - 50px);
     right: auto;
     left: 0;
@@ -734,7 +732,7 @@ p {
   background-size: contain;
 }
 
-.catalog-sections__title--slim::after {
+.catalog-section__title--slim::after {
   top: -3px;
   left: 7px;
   width: 36px;
@@ -742,7 +740,7 @@ p {
   background-image: url("../img/cat-slim.svg");
 }
 @media (min-width: 768px) {
-  .catalog-sections__title--slim::after {
+  .catalog-section__title--slim::after {
     top: calc(50% - 110px);
     right: 92px;
     left: auto;
@@ -751,7 +749,7 @@ p {
   }
 }
 @media (min-width: 1200px) {
-  .catalog-sections__title--slim::after {
+  .catalog-section__title--slim::after {
     top: calc(50% - 54px);
     left: 15px;
     width: 70px;
