@@ -15,8 +15,12 @@
 
 .catalog-section__item {
   position: relative;
-  padding: 20px;
+  padding: 30px 20px 18px;
   background-color: $color-gray-50;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 52px 52px;
+  }
 }
 
 .catalog-section__title {
@@ -61,10 +65,8 @@
 
     background-color: $color-green;
     border-radius: 50%;
-  }
 
-  @media (min-width: $tablet-width) {
-    &::before {
+    @media (min-width: $tablet-width) {
       top: calc(50% - 100px);
       right: 62px;
       left: auto;
@@ -72,10 +74,8 @@
       width: 200px;
       height: 200px;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    &::before {
+    @media (min-width: $desktop-width) {
       top: calc(50% - 50px);
       right: auto;
       left: 0;
@@ -87,6 +87,7 @@
 
   &::after {
     background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
@@ -119,7 +120,58 @@
   }
 }
 
+.catalog-section__title--pro {
+  &::after {
+    top: 9px;
+    left: -9px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/cat-pro.svg");
+
+    @media (min-width: $tablet-width) {
+      top: calc(50% - 50px);
+      right: 45px;
+      left: auto;
+
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: calc(50% - 25px);
+      left: -25px;
+
+      width: 134px;
+      height: 56px;
+    }
+  }
+}
+
+.catalog-section__text {
+  padding-bottom: 23px;
+  margin-bottom: 15px;
+
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 2px solid $color-gray-250;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 316px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+}
+
 .catalog-section__link {
+  display: inline-flex;
+  gap: 17px;
+  align-items: center;
   font-family: $font-heading;
   font-size: 16px;
   line-height: 100%;
@@ -127,4 +179,32 @@
   text-align: center;
   color: $color-black;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    gap: 25px;
+  }
+
+  &::after {
+    content: '';
+    width: 24px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/arrow-btn.svg');
+  }
+
+  &:hover {
+    &::after {
+      width: 32px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      width: 32px;
+    }
+  }
 }
