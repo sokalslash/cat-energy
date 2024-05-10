@@ -1,6 +1,13 @@
 .contacts__container {
+  padding: 26px 0;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 172px 172px;
+    justify-content: space-between;
+  }
 }
 
 .contacts__title {
@@ -14,4 +21,5 @@
 .contacts__address {
   line-height: 143%;
   color: $color-gray-700;
+  text-align: right;
 }
