@@ -1,12 +1,46 @@
-.contacts__container {
-  padding: 26px 0;
+.contacts {
+  &:not(.contacts--main) { //зачем тут этот background???
+    background-color: $color-gray-50;
+  }
 
+  @media (min-width: $desktop-width) {
+    position: relative;
+    z-index: 0;
+
+    min-height: 400px;
+    padding: 40px 0 52px;
+    display: grid;
+    grid-template-columns: 1220px;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+  }
+}
+
+.contacts__container {
+  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 26px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: $tablet-width) {
+    width: 708px;
+    padding: 56px 40px;
     grid-template-columns: 172px 172px;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative; //не понимаю как это работает без absolute???
+    z-index: 1;
+    width: 565px;
+    margin: 0;
+    padding: 56px 80px;
+
+    background-color: $color-white;
   }
 }
 
@@ -21,7 +55,14 @@
 .contacts__address {
   line-height: 143%;
   color: $color-gray-700;
-  text-align: right;
+
+  @media (min-width: $desktop-width) {
+    display: flex;                     //зачем?
+    flex-direction: column;            //зачем?
+    justify-content: space-between;    //зачем?
+
+    text-align: right;
+  }
 }
 
 .contacts__map {
@@ -31,11 +72,11 @@
 
   border: none;
 
-  @media (min-width: $breakpoint-medium) {
+  @media (min-width: $tablet-width) {
     height: 400px;
   }
 
-  @media (min-width: $breakpoint-large) {
+  @media (min-width: $desktop-width) {
     position: absolute;
     top: 0;
     right: 0;
