@@ -1,0 +1,38 @@
+.social {
+  padding: 12px 0;
+  display: flex;
+  // gap: 30px;
+  // align-items: center;
+  justify-content: center;
+
+  list-style: none;
+
+  @media (max-width: $tablet-width) {
+    padding: 0px;
+  }
+}
+
+.social__item {
+  margin: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+.social__link {
+  display: block;
+  padding: 8px;
+
+  color: $color-gray-600;
+
+  &:hover {
+    color: $color-green-2;
+  }
+
+  &:active {
+    color: rgba($color-green-2, 0.3);
+  }
+
+  svg {
+    display: block;
+  }
+}

@@ -31,3 +31,9 @@
     border-bottom: 1px solid $color-gray-200;
   }
 }
+
+.page-footer__developer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
